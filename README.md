@@ -9,6 +9,8 @@ These are Terraform modules that deploy [Confluent Platform](https://www.conflue
 
 ## Prerequisites
 First off you'll need to do some pre deploy setup.  That's all detailed [here](https://github.com/oracle/oci-quickstart-prerequisites).
+## Support for E3/E4 Flex Shapes
+Just need to change the parameter values in file 'variables.tf'
 
 ## Clone the Module
 Now, you'll want a local copy of this repo.  You can make that with the commands:
