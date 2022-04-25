@@ -54,51 +54,51 @@ variable "confluent" {
 }
 
 variable "broker" {
-  type = map(string)
+  type = map(any)
   default = {
-    shape      = "VM.Standard2.4"
-    node_count = 3
+    shape      = "VM.Standard.E4.Flex", ocpus = 1, memory = 16, boot_volume_size = 100
+    node_count = 3 
     disk_count = 1
-    disk_size  = 50
+    disk_size = 100
   }
 }
 
 variable "zookeeper" {
-  type = map(string)
+  type = map(any)
   default = {
-    shape      = "VM.Standard2.2"
+    shape      = "VM.Standard.E4.Flex", ocpus = 1, memory = 16, boot_volume_size = 50
     node_count = 3
   }
 }
 
 variable "connect" {
-  type = map(string)
+  type = map(any)
   default = {
-    shape      = "VM.Standard2.2"
+    shape      = "VM.Standard.E4.Flex", ocpus = 1, memory = 16, boot_volume_size = 50
     node_count = 2
   }
 }
 
 variable "rest" {
-  type = map(string)
+  type = map(any)
   default = {
-    shape      = "VM.Standard2.2"
+    shape      = "VM.Standard.E4.Flex", ocpus = 1, memory = 16, boot_volume_size = 50
     node_count = 2
   }
 }
 
 variable "schema_registry" {
-  type = map(string)
+  type = map(any)
   default = {
-    shape      = "VM.Standard2.2"
+    shape      = "VM.Standard.E4.Flex", ocpus = 1, memory = 16, boot_volume_size = 50
     node_count = 1
   }
 }
 
 variable "ksql" {
-  type = map(string)
+  type = map(any)
   default = {
-    shape      = "VM.Standard2.1"
+    shape      = "VM.Standard.E4.Flex", ocpus = 1, memory = 16, boot_volume_size = 50
     node_count = 2
   }
 }
@@ -118,7 +118,8 @@ variable "images" {
     uk-london-1    = "ocid1.image.oc1.uk-london-1.aaaaaaaarruepdlahln5fah4lvm7tsf4was3wdx75vfs6vljdke65imbqnhq"
     us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaannaquxy7rrbrbngpaqp427mv426rlalgihxwdjrz3fr2iiaxah5a"
     us-phoenix-1   = "ocid1.image.oc1.phx.aaaaaaaacss7qgb6vhojblgcklnmcbchhei6wgqisqmdciu3l4spmroipghq"
-  }
+    ap-singapore-1 = "ocid1.image.oc1.ap-singapore-1.aaaaaaaah6wihmqo7jfqpvfl7cd4fydr5dgruj4iuokm3essdutucdfiw6ra"
+   }
 }
 
 variable "vpc-cidr" {

@@ -10,7 +10,10 @@ resource "oci_core_instance" "broker" {
     source_id   = var.images[var.region]
     source_type = "image"
   }
-
+  shape_config {
+      memory_in_gbs =var.broker["memory"]
+      ocpus = var.broker["ocpus"]
+  }
   create_vnic_details {
     subnet_id      = oci_core_subnet.subnet.id
     hostname_label = "broker-${count.index}"
@@ -38,7 +41,6 @@ resource "oci_core_instance" "broker" {
       ),
     )
   }
-
   count = var.broker["node_count"]
 }
 
