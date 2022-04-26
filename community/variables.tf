@@ -108,17 +108,18 @@ variable "ksql" {
 # You probably don't need to change these.
 # ---------------------------------------------------------------------------------------------------------------------
 
-// https://docs.cloud.oracle.com/iaas/images/image/66379f54-edd0-4294-895f-47291a3eb4ed/
-// Oracle-Linux-7.6-2019.02.20-0
+// https://docs.oracle.com/en-us/iaas/images/image/b97380d8-e5df-4545-aa45-50c78122e1e1/
+// Oracle-Linux-7.9-2022.04.04-0
 variable "images" {
   type = map(string)
   default = {
-    ca-toronto-1   = "ocid1.image.oc1.ca-toronto-1.aaaaaaaa7ac57wwwhputaufcbf633ojir6scqa4yv6iaqtn3u64wisqd3jjq"
-    eu-frankfurt-1 = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaa527xpybx2azyhcz2oyk6f4lsvokyujajo73zuxnnhcnp7p24pgva"
-    uk-london-1    = "ocid1.image.oc1.uk-london-1.aaaaaaaarruepdlahln5fah4lvm7tsf4was3wdx75vfs6vljdke65imbqnhq"
-    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaannaquxy7rrbrbngpaqp427mv426rlalgihxwdjrz3fr2iiaxah5a"
-    us-phoenix-1   = "ocid1.image.oc1.phx.aaaaaaaacss7qgb6vhojblgcklnmcbchhei6wgqisqmdciu3l4spmroipghq"
     ap-singapore-1 = "ocid1.image.oc1.ap-singapore-1.aaaaaaaah6wihmqo7jfqpvfl7cd4fydr5dgruj4iuokm3essdutucdfiw6ra"
+    me-dubai-1     = "ocid1.image.oc1.me-dubai-1.aaaaaaaauhj6sdezwoucqoslxiabiajqyhxloabbtbrrum73lywmdkh2jdaa"
+    me-jeddah-1    = "ocid1.image.oc1.me-jeddah-1.aaaaaaaaperkuuxporyqgv7m2rwd4z7vx2yoq5zfydgm2a2ktl57mswhd3sa"
+    eu-frankfurt-1 = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaap6fedeihlynzoc4zbfqbdcha27ec7x2xbpg2a2edfarupjxn65wa"
+    sa-saopaulo-1  = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaazgdqu6qyebkor2yhmzpk6kirqoxrpavmefklvuvmng3wj3f6v3a"
+    sa-vinhedo-1 	 = "ocid1.image.oc1.sa-vinhedo-1.aaaaaaaaibh76ur5hn24t6f4oxj5du3ev7lw2st5k5wasnq36gnymam5qrca"
+    af-johannesburg-1 ="ocid1.image.oc1.af-johannesburg-1.aaaaaaaaqhgw6c6a6rna4jtzhq4nhl5qpzntn5uohi3nryelcn43v6h6kpja"
    }
 }
 
